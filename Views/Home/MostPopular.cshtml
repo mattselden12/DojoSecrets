@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Http
+@model List<Secret>
+
+<div id="popular">
+    <h1>Most Popular Secrets...</h1>
+    <a href="~/secrets" class="back">Back</a>
+    @foreach(var secret in @Model){
+        <div class="secret">
+            <p>@secret.Content</p>
+            <p class="date">@String.Format("{0: (MMMM d, yyyy, h:mm tt) }", secret.CreatedAt)</p>
+            <p class="italic">@secret.SecretLikes.Count likes</p>
+            @{
+                string Blean = "false";
+                foreach(var like in secret.SecretLikes){
+                    if(like.UserId == Context.Session.GetInt32("UserId")){
+                        Blean = "true";
+                    }
+                }
+                if(secret.UserId == Context.Session.GetInt32("UserId"))
+                {
+                    <p class="bold">You posted this</p>
+                    <form asp-action="DeleteSecret" asp-controller="Home" method="post" class="fakelink">
+                        <input type="hidden" name="secretid" value="@secret.SecretId">
+                        <button type="submit" class="btn btn-outline-primary">Delete</button>
+                    </form>
+                }
+                else if(Blean == "true")
+                {
+                    <p class="bold">You liked this</p>
+                }
+                else
+                {
+                    <form asp-action="LikeSecret" asp-controller="Home" method="post" class="fakelink">
+                        <input type="hidden" name="secretid" value="@secret.SecretId">
+                        <button type="submit" class="btn btn-outline-primary">Like</button>
+                    </form>
+                }
+            }
+        </div>
+    }
+</div>

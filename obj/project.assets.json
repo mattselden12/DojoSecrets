@@ -12788,11 +12788,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\DojoSecrets.csproj",
+      "projectUniqueName": "C:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\DojoSecrets.csproj",
       "projectName": "DojoSecrets",
-      "projectPath": "c:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\DojoSecrets.csproj",
+      "projectPath": "C:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\DojoSecrets.csproj",
       "packagesPath": "C:\\Users\\matth\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\obj\\",
+      "outputPath": "C:\\Users\\matth\\Desktop\\Coding Dojo\\c#_stack\\ORM\\DojoSecrets\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
